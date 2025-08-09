@@ -20,7 +20,6 @@
 		9F53E09A2E4725DA00F65267 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F53E0992E4725DA00F65267 /* RegisterView.swift */; };
 		9F53E09C2E4725F600F65267 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F53E09B2E4725F600F65267 /* MainView.swift */; };
 		9F53E09E2E47264300F65267 /* readMe.md in Resources */ = {isa = PBXBuildFile; fileRef = 9F53E09D2E47264300F65267 /* readMe.md */; };
-		9F53E0A02E475B6700F65267 /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F53E09F2E475B6700F65267 /* APIConfig.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +56,6 @@
 		9F53E0992E4725DA00F65267 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		9F53E09B2E4725F600F65267 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		9F53E09D2E47264300F65267 /* readMe.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readMe.md; sourceTree = "<group>"; };
-		9F53E09F2E475B6700F65267 /* APIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfig.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +112,6 @@
 				9F0ED6BF2E33E05D000B7E65 /* Assets.xcassets */,
 				9F0ED6C12E33E05D000B7E65 /* Preview Content */,
 				9F53E09D2E47264300F65267 /* readMe.md */,
-				9F53E09F2E475B6700F65267 /* APIConfig.swift */,
 			);
 			path = SwiftUIApp;
 			sourceTree = "<group>";
@@ -329,7 +326,6 @@
 			files = (
 				9F53E0962E47259300F65267 /* AuthViewModel.swift in Sources */,
 				9F53E09C2E4725F600F65267 /* MainView.swift in Sources */,
-				9F53E0A02E475B6700F65267 /* APIConfig.swift in Sources */,
 				9F0ED6BE2E33E05C000B7E65 /* ContentView.swift in Sources */,
 				9F0ED6E82E33E9BE000B7E65 /* TodoItem.swift in Sources */,
 				9F53E09A2E4725DA00F65267 /* RegisterView.swift in Sources */,
