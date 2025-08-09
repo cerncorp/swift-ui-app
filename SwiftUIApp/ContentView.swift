@@ -29,25 +29,30 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject var authVM = AuthViewModel()
+    @StateObject private var loginVM = MultiStepLoginViewModel()
     
     var body: some View {
         NavigationStack {
             Group {
-                if authVM.isLoggedIn {
-                    MainView()
-                        .environmentObject(authVM)
-                        .transition(.asymmetric(
-                            insertion: .move(edge: .trailing).combined(with: .opacity),
-                            removal: .move(edge: .leading).combined(with: .opacity)
-                        ))
-                } else {
-                    LoginView()
-                        .environmentObject(authVM)
-                        .transition(.asymmetric(
-                            insertion: .move(edge: .leading).combined(with: .opacity),
-                            removal: .move(edge: .trailing).combined(with: .opacity)
-                        ))
-                }
+//                if authVM.isLoggedIn {
+//                    MainView()
+//                        .environmentObject(authVM)
+//                        .transition(.asymmetric(
+//                            insertion: .move(edge: .trailing).combined(with: .opacity),
+//                            removal: .move(edge: .leading).combined(with: .opacity)
+//                        ))
+//                } else {
+//                    LoginView()
+//                        .environmentObject(authVM)
+//                        .transition(.asymmetric(
+//                            insertion: .move(edge: .leading).combined(with: .opacity),
+//                            removal: .move(edge: .trailing).combined(with: .opacity)
+//                        ))
+//                }
+                
+                
+                MultiStepLoginFlow()
+                    .environmentObject(loginVM)
             }
             .animation(.easeInOut(duration: 0.5), value: authVM.isLoggedIn)
         }

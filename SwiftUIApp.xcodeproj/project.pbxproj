@@ -14,12 +14,19 @@
 		9F0ED6CD2E33E05E000B7E65 /* SwiftUIAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0ED6CC2E33E05E000B7E65 /* SwiftUIAppTests.swift */; };
 		9F0ED6D72E33E05E000B7E65 /* SwiftUIAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0ED6D62E33E05E000B7E65 /* SwiftUIAppUITests.swift */; };
 		9F0ED6D92E33E05E000B7E65 /* SwiftUIAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0ED6D82E33E05E000B7E65 /* SwiftUIAppUITestsLaunchTests.swift */; };
-		9F0ED6E82E33E9BE000B7E65 /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0ED6E72E33E9BE000B7E65 /* TodoItem.swift */; };
 		9F53E0962E47259300F65267 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F53E0952E47259300F65267 /* AuthViewModel.swift */; };
 		9F53E0982E4725C800F65267 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F53E0972E4725C800F65267 /* LoginView.swift */; };
 		9F53E09A2E4725DA00F65267 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F53E0992E4725DA00F65267 /* RegisterView.swift */; };
 		9F53E09C2E4725F600F65267 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F53E09B2E4725F600F65267 /* MainView.swift */; };
 		9F53E09E2E47264300F65267 /* readMe.md in Resources */ = {isa = PBXBuildFile; fileRef = 9F53E09D2E47264300F65267 /* readMe.md */; };
+		9F53E0A22E476E2200F65267 /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F53E0A12E476E2200F65267 /* APIConfig.swift */; };
+		9F53E0A42E47AF5F00F65267 /* MultiStepLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F53E0A32E47AF5F00F65267 /* MultiStepLoginViewModel.swift */; };
+		9F53E0A72E47AF8600F65267 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F53E0A62E47AF8600F65267 /* ProgressBar.swift */; };
+		9F53E0AA2E47AFB600F65267 /* EmailStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F53E0A92E47AFB600F65267 /* EmailStepView.swift */; };
+		9F53E0AC2E47AFE100F65267 /* PasswordStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F53E0AB2E47AFE100F65267 /* PasswordStepView.swift */; };
+		9F53E0AE2E47AFF600F65267 /* OTPStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F53E0AD2E47AFF600F65267 /* OTPStepView.swift */; };
+		9F53E0B02E47B04800F65267 /* LoginMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F53E0AF2E47B04800F65267 /* LoginMainView.swift */; };
+		9F53E0B22E47B07700F65267 /* MultiStepLoginFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F53E0B12E47B07700F65267 /* MultiStepLoginFlow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,12 +57,19 @@
 		9F0ED6D22E33E05E000B7E65 /* SwiftUIAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUIAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F0ED6D62E33E05E000B7E65 /* SwiftUIAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIAppUITests.swift; sourceTree = "<group>"; };
 		9F0ED6D82E33E05E000B7E65 /* SwiftUIAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		9F0ED6E72E33E9BE000B7E65 /* TodoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItem.swift; sourceTree = "<group>"; };
 		9F53E0952E47259300F65267 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		9F53E0972E4725C800F65267 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		9F53E0992E4725DA00F65267 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		9F53E09B2E4725F600F65267 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		9F53E09D2E47264300F65267 /* readMe.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readMe.md; sourceTree = "<group>"; };
+		9F53E0A12E476E2200F65267 /* APIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfig.swift; sourceTree = "<group>"; };
+		9F53E0A32E47AF5F00F65267 /* MultiStepLoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiStepLoginViewModel.swift; sourceTree = "<group>"; };
+		9F53E0A62E47AF8600F65267 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
+		9F53E0A92E47AFB600F65267 /* EmailStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailStepView.swift; sourceTree = "<group>"; };
+		9F53E0AB2E47AFE100F65267 /* PasswordStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordStepView.swift; sourceTree = "<group>"; };
+		9F53E0AD2E47AFF600F65267 /* OTPStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPStepView.swift; sourceTree = "<group>"; };
+		9F53E0AF2E47B04800F65267 /* LoginMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginMainView.swift; sourceTree = "<group>"; };
+		9F53E0B12E47B07700F65267 /* MultiStepLoginFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiStepLoginFlow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +158,8 @@
 		9F0ED6E52E33E99C000B7E65 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				9F53E0B52E47B1D600F65267 /* config */,
+				9F53E0B32E47B18700F65267 /* navigation */,
 				9F53E0912E47255B00F65267 /* screen */,
 				9F0ED6E62E33E9A9000B7E65 /* model */,
 			);
@@ -153,7 +169,7 @@
 		9F0ED6E62E33E9A9000B7E65 /* model */ = {
 			isa = PBXGroup;
 			children = (
-				9F0ED6E72E33E9BE000B7E65 /* TodoItem.swift */,
+				9F53E0A32E47AF5F00F65267 /* MultiStepLoginViewModel.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -161,6 +177,7 @@
 		9F53E0912E47255B00F65267 /* screen */ = {
 			isa = PBXGroup;
 			children = (
+				9F53E0A52E47AF7A00F65267 /* components */,
 				9F53E0942E47257700F65267 /* dashboard */,
 				9F53E0932E47257000F65267 /* register */,
 				9F53E0922E47256700F65267 /* login */,
@@ -171,6 +188,7 @@
 		9F53E0922E47256700F65267 /* login */ = {
 			isa = PBXGroup;
 			children = (
+				9F53E0A82E47AF9900F65267 /* login_flow */,
 				9F53E0952E47259300F65267 /* AuthViewModel.swift */,
 				9F53E0972E4725C800F65267 /* LoginView.swift */,
 			);
@@ -191,6 +209,49 @@
 				9F53E09B2E4725F600F65267 /* MainView.swift */,
 			);
 			path = dashboard;
+			sourceTree = "<group>";
+		};
+		9F53E0A52E47AF7A00F65267 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				9F53E0A62E47AF8600F65267 /* ProgressBar.swift */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		9F53E0A82E47AF9900F65267 /* login_flow */ = {
+			isa = PBXGroup;
+			children = (
+				9F53E0A92E47AFB600F65267 /* EmailStepView.swift */,
+				9F53E0AB2E47AFE100F65267 /* PasswordStepView.swift */,
+				9F53E0AD2E47AFF600F65267 /* OTPStepView.swift */,
+				9F53E0AF2E47B04800F65267 /* LoginMainView.swift */,
+			);
+			path = login_flow;
+			sourceTree = "<group>";
+		};
+		9F53E0B32E47B18700F65267 /* navigation */ = {
+			isa = PBXGroup;
+			children = (
+				9F53E0B42E47B19400F65267 /* login_flow */,
+			);
+			path = navigation;
+			sourceTree = "<group>";
+		};
+		9F53E0B42E47B19400F65267 /* login_flow */ = {
+			isa = PBXGroup;
+			children = (
+				9F53E0B12E47B07700F65267 /* MultiStepLoginFlow.swift */,
+			);
+			path = login_flow;
+			sourceTree = "<group>";
+		};
+		9F53E0B52E47B1D600F65267 /* config */ = {
+			isa = PBXGroup;
+			children = (
+				9F53E0A12E476E2200F65267 /* APIConfig.swift */,
+			);
+			path = config;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,11 +387,18 @@
 			files = (
 				9F53E0962E47259300F65267 /* AuthViewModel.swift in Sources */,
 				9F53E09C2E4725F600F65267 /* MainView.swift in Sources */,
+				9F53E0A22E476E2200F65267 /* APIConfig.swift in Sources */,
 				9F0ED6BE2E33E05C000B7E65 /* ContentView.swift in Sources */,
-				9F0ED6E82E33E9BE000B7E65 /* TodoItem.swift in Sources */,
+				9F53E0B22E47B07700F65267 /* MultiStepLoginFlow.swift in Sources */,
+				9F53E0AA2E47AFB600F65267 /* EmailStepView.swift in Sources */,
 				9F53E09A2E4725DA00F65267 /* RegisterView.swift in Sources */,
+				9F53E0B02E47B04800F65267 /* LoginMainView.swift in Sources */,
+				9F53E0A42E47AF5F00F65267 /* MultiStepLoginViewModel.swift in Sources */,
 				9F53E0982E4725C800F65267 /* LoginView.swift in Sources */,
+				9F53E0A72E47AF8600F65267 /* ProgressBar.swift in Sources */,
+				9F53E0AE2E47AFF600F65267 /* OTPStepView.swift in Sources */,
 				9F0ED6BC2E33E05C000B7E65 /* SwiftUIAppApp.swift in Sources */,
+				9F53E0AC2E47AFE100F65267 /* PasswordStepView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
