@@ -35,7 +35,6 @@ struct LoginView: View {
                         Image(systemName: "envelope")
                             .foregroundColor(.gray)
                         TextField("Email", text: $email)
-                            .colorMultiply(.black)
                             .keyboardType(.emailAddress)
                             .textContentType(.emailAddress)
                             .autocapitalization(.none)
@@ -49,7 +48,6 @@ struct LoginView: View {
                         Image(systemName: "lock")
                             .foregroundColor(.gray)
                         SecureField("Password", text: $password)
-                            .colorMultiply(.black)
                             .textContentType(.password)
                             .autocapitalization(.none)
                             .disableAutocorrection(true)
@@ -61,15 +59,25 @@ struct LoginView: View {
                     Button(action: {
                         authVM.login(email: email, password: password)
                     }) {
-                        Text("Login")
-                            .frame(maxWidth: .infinity)
-                            .padding()
-                            .background(Color.orange)
-                            .foregroundColor(.white)
-                            .cornerRadius(10)
-                            .shadow(radius: 5)
+                        HStack {
+                            if authVM.isLoading {
+                                ProgressView()
+                                    .progressViewStyle(CircularProgressViewStyle(tint: .white))
+                                    .scaleEffect(0.8)
+                                Text("Logging in...")
+                                    .foregroundColor(.white)
+                            } else {
+                                Text("Login")
+                                    .foregroundColor(.white)
+                            }
+                        }
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                        .background(authVM.isLoading ? Color.gray : Color.orange)
+                        .cornerRadius(10)
+                        .shadow(radius: 5)
                     }
-                    .disabled(email.isEmpty || password.isEmpty)
+                    .disabled(email.isEmpty || password.isEmpty || authVM.isLoading)
                     
                     NavigationLink("Don't have an account? Register", destination: RegisterView()
                         .environmentObject(authVM)
@@ -85,6 +93,13 @@ struct LoginView: View {
                 
                 Spacer()
             }
+        }
+        .alert("Login Error", isPresented: $authVM.showError) {
+            Button("OK") {
+                authVM.showError = false
+            }
+        } message: {
+            Text(authVM.errorMessage)
         }
     }
 }

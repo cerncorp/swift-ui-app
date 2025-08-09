@@ -98,7 +98,6 @@ struct RegisterView: View {
                         Image(systemName: "envelope")
                             .foregroundColor(.gray)
                         TextField("Email", text: $email)
-                            .colorMultiply(.black)
                             .keyboardType(.emailAddress)
                             .textContentType(.emailAddress)
                             .autocapitalization(.none)
@@ -112,7 +111,6 @@ struct RegisterView: View {
                         Image(systemName: "lock")
                             .foregroundColor(.gray)
                         SecureField("Password", text: $password)
-                            .colorMultiply(.black)
                             .textContentType(.newPassword)
                             .autocapitalization(.none)
                             .disableAutocorrection(true)
@@ -125,7 +123,6 @@ struct RegisterView: View {
                         Image(systemName: "lock.fill")
                             .foregroundColor(.gray)
                         SecureField("Confirm Password", text: $confirmPassword)
-                            .colorMultiply(.black)
                             .textContentType(.newPassword)
                             .autocapitalization(.none)
                             .disableAutocorrection(true)
@@ -147,15 +144,26 @@ struct RegisterView: View {
                     }
                     
                     Button(action: handleRegister) {
-                        Text("Sign Up")
-                            .frame(maxWidth: .infinity)
-                            .padding()
-                            .background(isFormValid ? Color.green : Color.gray)
-                            .foregroundColor(.white)
-                            .cornerRadius(10)
-                            .shadow(radius: 5)
+                        HStack {
+                            if authVM.isLoading {
+                                ProgressView()
+                                    .progressViewStyle(CircularProgressViewStyle(tint: .white))
+                                    .scaleEffect(0.8)
+                                Text("Creating account...")
+                                    .foregroundColor(.white)
+                            } else {
+                                Text("Sign Up")
+                                    .foregroundColor(.white)
+                            }
+                        }
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                        .background((isFormValid && !authVM.isLoading) ? Color.green : Color.gray)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                        .shadow(radius: 5)
                     }
-                    .disabled(!isFormValid)
+                    .disabled(!isFormValid || authVM.isLoading)
                 }
                 .padding()
                 .background(Color.white.opacity(0.2))
@@ -172,6 +180,13 @@ struct RegisterView: View {
             }
         } message: {
             Text(errorMessage)
+        }
+        .alert("API Error", isPresented: $authVM.showError) {
+            Button("OK") {
+                authVM.showError = false
+            }
+        } message: {
+            Text(authVM.errorMessage)
         }
         .onChange(of: authVM.isLoggedIn) { newValue in
             print("🔄 RegisterView detected auth state change: isLoggedIn = \(newValue)")
