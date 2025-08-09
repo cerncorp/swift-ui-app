@@ -9,7 +9,9 @@ import Foundation
 
 struct APIConfig {
     // Update this URL when your ngrok URL changes
-    static let baseURL = "https://d064bd2c6259.ngrok-free.app"
+//    static let baseURL = "https://d064bd2c6259.ngrok-free.app"
+    static let baseURL = "https://close-midge-duly.ngrok-free.app"
+
     
     // API Endpoints
     static let loginEndpoint = "/login"
