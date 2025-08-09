@@ -100,14 +100,15 @@ class AuthViewModel: ObservableObject {
                 } catch {
                     // Try to parse as simple response
                     if let responseString = String(data: data, encoding: .utf8) {
-                        if responseString.contains("success") || responseString.contains("true") {
-                            // Assume success if response contains success indicators
-                            self?.email = email
-                            self?.isLoggedIn = true
-                            print("✅ Login successful (simple response), isLoggedIn set to: \(self?.isLoggedIn ?? false)")
-                        } else {
-                            self?.handleError("Invalid response format")
-                        }
+//                        if responseString.contains("success") && responseString.contains("true") {
+//                            // Assume success if response contains success indicators
+//                            self?.email = email
+//                            self?.isLoggedIn = true
+//                            print("✅ Login successful (simple response), isLoggedIn set to: \(self?.isLoggedIn ?? false)")
+//                        } else {
+//                            self?.handleError("Invalid response format")
+//                        }
+                        self?.handleError("Invalid response format: \(responseString.prefix(128))")
                     } else {
                         self?.handleError("Failed to parse response")
                     }
