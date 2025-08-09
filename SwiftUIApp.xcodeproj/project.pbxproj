@@ -14,6 +14,12 @@
 		9F0ED6CD2E33E05E000B7E65 /* SwiftUIAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0ED6CC2E33E05E000B7E65 /* SwiftUIAppTests.swift */; };
 		9F0ED6D72E33E05E000B7E65 /* SwiftUIAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0ED6D62E33E05E000B7E65 /* SwiftUIAppUITests.swift */; };
 		9F0ED6D92E33E05E000B7E65 /* SwiftUIAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0ED6D82E33E05E000B7E65 /* SwiftUIAppUITestsLaunchTests.swift */; };
+		9F0ED6E82E33E9BE000B7E65 /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0ED6E72E33E9BE000B7E65 /* TodoItem.swift */; };
+		9F53E0962E47259300F65267 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F53E0952E47259300F65267 /* AuthViewModel.swift */; };
+		9F53E0982E4725C800F65267 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F53E0972E4725C800F65267 /* LoginView.swift */; };
+		9F53E09A2E4725DA00F65267 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F53E0992E4725DA00F65267 /* RegisterView.swift */; };
+		9F53E09C2E4725F600F65267 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F53E09B2E4725F600F65267 /* MainView.swift */; };
+		9F53E09E2E47264300F65267 /* readMe.md in Resources */ = {isa = PBXBuildFile; fileRef = 9F53E09D2E47264300F65267 /* readMe.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +50,12 @@
 		9F0ED6D22E33E05E000B7E65 /* SwiftUIAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUIAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F0ED6D62E33E05E000B7E65 /* SwiftUIAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIAppUITests.swift; sourceTree = "<group>"; };
 		9F0ED6D82E33E05E000B7E65 /* SwiftUIAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9F0ED6E72E33E9BE000B7E65 /* TodoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItem.swift; sourceTree = "<group>"; };
+		9F53E0952E47259300F65267 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		9F53E0972E4725C800F65267 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		9F53E0992E4725DA00F65267 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		9F53E09B2E4725F600F65267 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		9F53E09D2E47264300F65267 /* readMe.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readMe.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,10 +106,12 @@
 		9F0ED6BA2E33E05C000B7E65 /* SwiftUIApp */ = {
 			isa = PBXGroup;
 			children = (
+				9F0ED6E52E33E99C000B7E65 /* src */,
 				9F0ED6BB2E33E05C000B7E65 /* SwiftUIAppApp.swift */,
 				9F0ED6BD2E33E05C000B7E65 /* ContentView.swift */,
 				9F0ED6BF2E33E05D000B7E65 /* Assets.xcassets */,
 				9F0ED6C12E33E05D000B7E65 /* Preview Content */,
+				9F53E09D2E47264300F65267 /* readMe.md */,
 			);
 			path = SwiftUIApp;
 			sourceTree = "<group>";
@@ -125,6 +139,58 @@
 				9F0ED6D82E33E05E000B7E65 /* SwiftUIAppUITestsLaunchTests.swift */,
 			);
 			path = SwiftUIAppUITests;
+			sourceTree = "<group>";
+		};
+		9F0ED6E52E33E99C000B7E65 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				9F53E0912E47255B00F65267 /* screen */,
+				9F0ED6E62E33E9A9000B7E65 /* model */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		9F0ED6E62E33E9A9000B7E65 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				9F0ED6E72E33E9BE000B7E65 /* TodoItem.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		9F53E0912E47255B00F65267 /* screen */ = {
+			isa = PBXGroup;
+			children = (
+				9F53E0942E47257700F65267 /* dashboard */,
+				9F53E0932E47257000F65267 /* register */,
+				9F53E0922E47256700F65267 /* login */,
+			);
+			path = screen;
+			sourceTree = "<group>";
+		};
+		9F53E0922E47256700F65267 /* login */ = {
+			isa = PBXGroup;
+			children = (
+				9F53E0952E47259300F65267 /* AuthViewModel.swift */,
+				9F53E0972E4725C800F65267 /* LoginView.swift */,
+			);
+			path = login;
+			sourceTree = "<group>";
+		};
+		9F53E0932E47257000F65267 /* register */ = {
+			isa = PBXGroup;
+			children = (
+				9F53E0992E4725DA00F65267 /* RegisterView.swift */,
+			);
+			path = register;
+			sourceTree = "<group>";
+		};
+		9F53E0942E47257700F65267 /* dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				9F53E09B2E4725F600F65267 /* MainView.swift */,
+			);
+			path = dashboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +298,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F0ED6C32E33E05D000B7E65 /* Preview Assets.xcassets in Resources */,
+				9F53E09E2E47264300F65267 /* readMe.md in Resources */,
 				9F0ED6C02E33E05D000B7E65 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,7 +324,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F53E0962E47259300F65267 /* AuthViewModel.swift in Sources */,
+				9F53E09C2E4725F600F65267 /* MainView.swift in Sources */,
 				9F0ED6BE2E33E05C000B7E65 /* ContentView.swift in Sources */,
+				9F0ED6E82E33E9BE000B7E65 /* TodoItem.swift in Sources */,
+				9F53E09A2E4725DA00F65267 /* RegisterView.swift in Sources */,
+				9F53E0982E4725C800F65267 /* LoginView.swift in Sources */,
 				9F0ED6BC2E33E05C000B7E65 /* SwiftUIAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -417,8 +489,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIApp/Preview Content\"";
+				DEVELOPMENT_TEAM = 93D9KK29RF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -445,8 +519,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIApp/Preview Content\"";
+				DEVELOPMENT_TEAM = 93D9KK29RF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
